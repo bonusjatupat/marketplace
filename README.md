@@ -1,6 +1,6 @@
 # Marketplace
 
-> My fontend web Nuxt.js practice project
+> My Nuxt.js practice project
 
 ## Build Setup
 
