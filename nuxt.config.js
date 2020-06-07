@@ -13,6 +13,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: "https://unpkg.com/ionicons/dist/ionicons.js", body: true }
     ]
   },
   /*
@@ -23,6 +26,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/scss/custom.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -38,6 +42,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'bootstrap-vue/nuxt'
   ],
   /*
   ** Build configuration
@@ -48,5 +53,17 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  module: {
+    rules: [
+        {
+           test: /\.s[ac]ss$/i,
+           use: ['style-loader','css-loader','sass-loader',],
+         } 
+    ]
+  },
+  bootstrapVue: {
+    bootstrapCSS: false, 
+    bootstrapVueCSS: false
   }
 }
