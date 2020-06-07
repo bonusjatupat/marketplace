@@ -1,6 +1,6 @@
 <template>
   <div id="Header">
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="../assets/images/logo.png" class="img-brand" />

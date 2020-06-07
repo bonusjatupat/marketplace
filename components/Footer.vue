@@ -47,7 +47,7 @@
                         <p>Saturday - Sunday 9:00 - 20:00</p>
                     </div>
                     <div class="col-12 footer-bottom">
-                        <p class="text-center">BetterBe Marketplace Company Limited 162/1-2,168/10 Pracha Rat Sai 2 Rd Bangsue, Bangkok 10800</p>
+                        <p class="text-right">BetterBe Marketplace Company Limited 162/1-2,168/10 Pracha Rat Sai 2 Rd Bangsue, Bangkok 10800</p>
                     </div>
                 </div>
             </div>
