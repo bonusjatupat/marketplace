@@ -13,7 +13,7 @@ const product = [
     },
     {
         id: "00002",
-        name: "HATORI SOFA",
+        name: "Hatori Sofa",
         description: "โซฟาฐานไม้จริงพร้อมเบาะครบชุด - รุ่นฮาโตริ 2 ที่นั่ง ผ้า เบาะหลากสีและฐานไม้สีธรรมชาติเคล",
         image: "../assets/images/00002.jpg",
         price: 16000,
@@ -25,7 +25,7 @@ const product = [
     },
     {
         id: "00003",
-        name: "AR L SHAPE SOFA",
+        name: "Ar L Shape Sofa",
         description: "AR L SHAPE SOFA ตัวเบดยื่นตามรูป โอรสอ่อน",
         image: "../assets/images/00003.jpg",
         price: 23300,
@@ -49,7 +49,7 @@ const product = [
     },
     {
         id: "00005",
-        name: "DORY SOFA",
+        name: "Dory Sofa",
         description: "โซฟา DORY SOFA เตียงโซฟา ผ้า สีไม้ยางพาราธรรมชาติ (160x77x79 Cm)",
         image: "../assets/images/00005.jpg",
         price: 19800,
