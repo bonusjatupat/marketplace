@@ -2,9 +2,9 @@
   <div id="Header">
     <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="../assets/images/logo.png" class="img-brand" />
-        </a>
+        <nuxt-link to='/' class="navbar-brand">
+            <img src="../assets/images/logo.png" class="img-brand" />
+        </nuxt-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
         </button>

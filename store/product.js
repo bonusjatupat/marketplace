@@ -33,7 +33,7 @@ const product = [
         soldAmount: 49,
         inStock: true,
         star: 5,
-        favorite: true
+        favorite: false
     },
     {
         id: "00004",
@@ -69,7 +69,7 @@ const product = [
         soldAmount: 55,
         inStock: true,
         star: 4,
-        favorite: true 
+        favorite: false
     },
     {
         id: "00007",

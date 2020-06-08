@@ -3,9 +3,22 @@
     <PromotionSlide />
     <div class="main-container">
 
+      <!-- Your Favorite -->
+      <div v-if="favProducts.length >= 1" class="container-fluid product-fav">
+        <h2>
+          Your NocNoc
+          <span class="text-fav">Favorite(s)</span>
+        </h2>
+      </div>
+      <!-- Favorites' Cards --> 
+      <div class="row row-cols-1 row-cols-md-5 product-all">
+        <ProductCard v-for="product in favProducts" :key="product.id" :product="product" />
+      </div>
+      <div v-if="favProducts.length >= 1"><p></p></div>
+      
       <!-- NocNoc's Products! -->
-      <div class="container-fluid padding title">
-        <div class="row padding">
+      <div class="container-fluid title-all">
+        <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-2">
             <img src="../assets/images/choices.png" class="img-choices">
           </div>
@@ -15,12 +28,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Fav Products -->
-      
-
       <!-- Products' Cards -->
-      <div class="row row-cols-1 row-cols-md-5 product-cards">
+      <div class="row row-cols-1 row-cols-md-5 product-all">
         <ProductCard v-for="product in products" :key="product.id" :product="product" />
       </div>
 
@@ -41,6 +50,10 @@ export default {
   computed: {
     products() {
       return this.$store.state.product.products
+    },
+    favProducts() {
+      var favProducts = this.$store.state.product.products.filter(product => product.favorite == true)
+      return favProducts
     }
   }
 }
@@ -60,9 +73,12 @@ export default {
   margin-top: .5rem;
   margin-bottom: 0rem;
 }
-.product-cards {
+.product-all {
   margin-top: 1rem;
   margin-left: .1rem;
   margin-right: .1rem;
+}
+.text-fav {
+  color: #FA6337;
 }
 </style>
