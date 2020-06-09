@@ -25,7 +25,7 @@
                 <span v-for="i in product.star" :key="i">
                     <ion-icon name="star" class="ic-star"></ion-icon>
                 </span>
-              <span class="text-sold">{{ product.soldAmount }} sold</span>
+              <span class="text-sold">{{ product.soldNumber }} sold</span>
             </div>
           </div>
         </div>

@@ -7,7 +7,6 @@
       <div v-if="favProducts.length >= 1" class="container-fluid product-fav">
         <h2>Your NocNoc <span class="text-fav">Favorite(s)</span></h2>
       </div>
-      <!-- Favorites' Cards --> 
       <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
         <ProductCard v-for="product in favProducts" :key="product.id" :product="product" />
       </div>
@@ -19,7 +18,6 @@
         header="Recommended Products"
         subHeader="NocNoc has selected some products that might suit your profile"
       />
-      <!-- Products' Cards -->
       <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
         <ProductCard v-for="product in recommendedProducts" :key="product.id" :product="product" />
       </div>
@@ -30,7 +28,6 @@
         header="NocNoc's Products!"
         subHeader="NocNoc's Highly Rated And Well-Priced Product That Is Ready For You."
       />
-      <!-- Products' Cards -->
       <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
         <ProductCard v-for="product in products" :key="product.id" :product="product" />
       </div>
@@ -71,14 +68,6 @@ export default {
   padding-left: 4rem;
   padding-right: 4rem;
   margin-top: 1rem;
-}
-.img-choices {
-  width: 200px;
-  height: 80px;
-}
-.title h2 {
-  margin-top: .5rem;
-  margin-bottom: 0rem;
 }
 .product-card {
   margin-top: 1rem;
