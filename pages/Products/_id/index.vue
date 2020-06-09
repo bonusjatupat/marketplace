@@ -40,6 +40,7 @@
               <li>{{ spec }}</li>
             </ul>
           </div>
+          
         </div>
         <!-- Check Out Card -->
         <div class="col-xs-12 col-sm-12 col-md-3 check-card">
@@ -104,6 +105,7 @@ export default {
 <style scoped>
 #Product {
   background-color: rgb(240, 240, 240);
+  padding-bottom: 2rem
 }
 hr {
   margin-left: 4rem;
