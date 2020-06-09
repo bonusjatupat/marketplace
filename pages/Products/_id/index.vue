@@ -1,5 +1,7 @@
 <template>
   <div id="Product">
+
+    <!-- Product Information-->
     <div class="container-fluid main-container">
       <div class="row">
         <!-- Product's Image -->
@@ -56,16 +58,39 @@
         </div>
       </div>
     </div>
+
+    <hr>
+    
+    <!-- Other Products -->
+    <div class="layout-other-products">
+      <h2>Other <span class="text-nocnoc">NocNoc</span> Products</h2>
+      <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
+        <ProductCard v-for="product in otherProducts" :key="product.id" :product="product" />
+      </div>
+    </div>
+
+
   </div>
 </template>
 
 <script>
+import HeaderCard from "../../../components/HeaderCard"
+import ProductCard from "../../../components/ProductCard"
+
 export default {
   name: "Product",
+  components: {
+    HeaderCard,
+    ProductCard
+  },
   computed: {
     product() {
       var product = this.$store.state.product.products.find(product => product.id === this.$route.params.id);
       return product;
+    },
+    otherProducts() {
+      var products = this.$store.state.product.products.filter(product => product.id != this.$route.params.id);
+      return products;
     }
   },
   methods: {
@@ -80,9 +105,13 @@ export default {
 #Product {
   background-color: rgb(240, 240, 240);
 }
+hr {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  text-align: center;
+}
 .main-container {
   padding-top: 3rem;
-  padding-bottom: 3rem;
   padding-left: 4rem;
   padding-right: 4rem;
 }
@@ -135,5 +164,16 @@ export default {
 .text-stock-red {
   background-color: red;
   color: #ffffff;
+}
+.text-nocnoc {
+  color: #343ab4
+}
+.layout-other-products {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
+}
+.product-card {
+  margin-top: 2rem;
 }
 </style>
