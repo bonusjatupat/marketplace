@@ -8,10 +8,10 @@
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
               <div class="row">
-                    <div class="col-8">
-                        <p class="card-text"><span class="text-price">฿{{ product.price }}</span>/{{ product.unit }}</p>
+                    <div class="col-10">
+                        <p class="card-text"><span class="text-price">฿{{ productPrice }}</span>/{{ product.unit }}</p>
                     </div>
-                    <div class="col-4 ic-heart">
+                    <div class="col-2 ic-heart">
                         <div v-if="product.favorite">
                             <ion-icon name="heart" class="ic-heart" @click="onClickFavorite(product.id)"></ion-icon>
                         </div>
@@ -36,11 +36,16 @@
 export default {
     name: "ProductCard",
     props: ["product"],
+    computed: {
+      productPrice() {
+        return Number(parseFloat(this.product.price).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0});
+      }
+    },
     methods: {
         onClickFavorite(id) {
             this.$store.commit('product/favorite', id)
         }
-    }
+    }  
 }
 </script>
 

@@ -22,17 +22,17 @@
         <!-- Product's Info -->
         <div class="col-xs-12 col-sm-12 col-md-5 content">
           <img src="../../../assets/images/choices_orange.png" class="img-choices"/>
-          <h3>{{product.description}}</h3>
+          <h3>{{ product.description }}</h3>
           <p>
             <span v-for="i in product.star" :key="i">
               <ion-icon name="star" class="ic-star"></ion-icon>
             </span>
-            | {{product.soldNumber}} Sold | 
-            <mark v-if="product.stockNumber >= 1" class="text-stock-green">{{product.stockNumber}} In Stock</mark>
+            | {{ product.soldNumber }} Sold | 
+            <mark v-if="product.stockNumber >= 1" class="text-stock-green">{{ product.stockNumber }} In Stock</mark>
             <mark v-else class="text-stock-red">Out of Stock</mark>
           </p>
           <div class="price-box">
-            <p><span class="text-price">฿{{product.price}}</span> /{{product.unit}}</p>
+            <p><span class="text-price">฿{{ productPrice }}</span> /{{ product.unit }}</p>
           </div>
           <div v-if="product.specification.length >= 1">
             <p class="font-weight-bold">Highlight Specifications</p>
@@ -43,17 +43,36 @@
           
         </div>
         <!-- Check Out Card -->
-        <div class="col-xs-12 col-sm-12 col-md-3 check-card">
-          <div class="card" style="width: 18rem;">
+        <div class="col-xs-12 col-sm-12 col-md-3">
+          <div class="card card-cart" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <p class="card-title font-weight-bold">Package Quantity</p>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary" type="button">-</button>
+                </div>
+                <input type="text" class="form-control text-center" placeholder="1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button">+</button>
+                </div>
+              </div>
+              <p class="text-total">1 Each <span>= ฿{{productPrice}}</span></p>
+              <button type="button" class="btn btn-secondary btn-add-cart">
+                <ion-icon class="align-middle" name="cart-outline"></ion-icon>
+                <span class="align-middle">Add to Cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="card card-policy" style="width: 18rem; margin-top: 1rem;">
+            <div class="card-body">
+              <p class="card-title font-weight-bold">
+                <ion-icon class="align-middle" name="document-text-outline"></ion-icon>
+                <span class="align-middle">Policy & Returns</span>
               </p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <p class="card-text">7 days easy return only if the item is sealed and in original condition</p>
+              <hr>
+              <p class="card-text">Tax invoice is applicable</p>
             </div>
           </div>
         </div>
@@ -88,6 +107,9 @@ export default {
     product() {
       var product = this.$store.state.product.products.find(product => product.id === this.$route.params.id);
       return product;
+    },
+    productPrice() {
+      return Number(parseFloat(this.product.price).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0});
     },
     otherProducts() {
       var products = this.$store.state.product.products.filter(product => product.id != this.$route.params.id);
@@ -159,6 +181,15 @@ hr {
   font-size: 32px;
   margin-left: 1rem;
 }
+.text-total {
+  background-color: rgb(240, 240, 240);
+  padding: .3rem;
+  margin-top: -.3rem;
+}
+.text-total span {
+  color: red;
+  font-size: 12px;
+}
 .text-stock-green {
   background-color: green;
   color: #ffffff;
@@ -166,6 +197,12 @@ hr {
 .text-stock-red {
   background-color: red;
   color: #ffffff;
+}
+.input-group {
+  margin-top: -.5rem;
+}
+.btn-add-cart {
+  width: 100%;
 }
 .text-nocnoc {
   color: #343ab4
@@ -177,5 +214,17 @@ hr {
 }
 .product-card {
   margin-top: 2rem;
+}
+.card-policy ion-icon {
+  font-size: 20px;
+}
+.card-policy .card-text {
+  font-size: 13px;
+  color: #696969;
+}
+.card-policy hr {
+  width: 100%;
+  align-content: center;
+  margin-left: 0;
 }
 </style>
