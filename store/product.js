@@ -49,8 +49,7 @@ const product = [
         soldNumber: 49,
         stockNumber: 4,
         star: 5,
-        favorite: false,
-        specification: [] 
+        favorite: false
     },
     {
         id: "00004",
@@ -58,7 +57,8 @@ const product = [
         description: "ฌ เฌอ อาร์มแชร์ อีมู (Emu Armchair) 1 ที่นั่ง ขนาด 90 ซม. เบาะหนังแท้ พนักพิงผ้าเลือกสีได้",
         specification: [
             "ผลิตจาไม้โอ๊คแท้ 100% รับประกันความแข็งแรง",
-            "เคลือบโพลียูรีเทนใสกึ่งด้าน กันน้ำ กันรา"
+            "เคลือบโพลียูรีเทนใสกึ่งด้าน กันน้ำ กันรา",
+            "รับน้ำหนักได้สูงสุด 120kgs"
         ], 
         image: "../assets/products/00004.png",
         price: 32000,
@@ -66,8 +66,7 @@ const product = [
         soldNumber: 32,
         stockNumber: 9,
         star: 4,
-        favorite: false,
-        specification: [] 
+        favorite: false
     },
     {
         id: "00005",

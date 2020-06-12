@@ -49,14 +49,17 @@
               <p class="card-title font-weight-bold">Package Quantity</p>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <button class="btn btn-outline-secondary" type="button">-</button>
+                  <button class="btn btn-outline-secondary" type="button" @click="onClickDecreaseQuatity">-</button>
                 </div>
-                <input type="text" class="form-control text-center" placeholder="1">
+                <input type="text" class="form-control text-center" placeholder="1" v-model="quatity">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">+</button>
+                  <button class="btn btn-outline-secondary" type="button" @click="onClickIncreaseQuatity">+</button>
                 </div>
               </div>
-              <p class="text-total">1 Each <span>= ฿{{productPrice}}</span></p>
+              <p class="text-total">
+                {{quatity}} Each 
+                <span>= ฿{{Number(parseFloat(parseInt(quatity) * parseInt(product.price)).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0})}}</span>
+              </p>
               <button type="button" class="btn btn-secondary btn-add-cart">
                 <ion-icon class="align-middle" name="cart-outline"></ion-icon>
                 <span class="align-middle">Add to Cart</span>
@@ -119,8 +122,19 @@ export default {
   methods: {
     onClickFavorite(id) {
       this.$store.commit("product/favorite", id);
+    },
+    onClickIncreaseQuatity() {
+      this.quatity += 1;
+    },
+    onClickDecreaseQuatity() {
+      if(this.quatity > 1) this.quatity -= 1;
     }
-  }
+  },
+  data() {
+    return {
+      quatity: 1
+    }
+  },
 };
 </script>
 
