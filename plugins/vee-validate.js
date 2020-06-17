@@ -18,7 +18,7 @@ extend("alpha_spaces", {
 
 extend("email", {
     ...email,
-    message: "This field must only contain email address"
+    message: "This field must be in form of email address"
 });
 
 

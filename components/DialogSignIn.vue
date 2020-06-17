@@ -26,10 +26,9 @@
                 <hr>
                 <p class="text-title">New to NocNoc?</p>
                 <p class="text-body">Please create your shopping account</p>
-                <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter2">Sign Up</button>
-                <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter2Title" aria-hidden="true">
-                    <DialogSignUp />
-              </div>
+                <button class="btn btn-secondary">Sign Up</button>
+                
+            
             </div>
         </div>
     </div>
