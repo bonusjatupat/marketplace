@@ -12,7 +12,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search All Products" />
+                    <input type="text" class="form-control" placeholder="Search All Products" v-model="search"/>
                     <div class="input-group-append">
                         <button class="btn btn-light" type="button" id="search-button">
                             <ion-icon name="search-outline"></ion-icon>
@@ -20,9 +20,13 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item"><ion-icon name="cart-outline"></ion-icon></li>
             <li class="nav-item">
-              <ion-icon name="person-circle-outline"></ion-icon>
+              <ion-icon name="cart-outline"></ion-icon></li>
+            <li class="nav-item">
+              <ion-icon name="person-circle-outline" type="button" data-toggle="modal" data-target="#exampleModalCenter"></ion-icon>
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <DialogSignIn />
+              </div>
             </li>
           </ul>
         </div>
@@ -32,8 +36,18 @@
 </template>
 
 <script>
+import DialogSignIn from './DialogSignIn'
+
 export default {
-  name: "Header"
+  name: "Header",
+  components: {
+    DialogSignIn
+  },
+  data() {
+    return {
+      search: ""
+    }
+  },
 };
 </script>
 

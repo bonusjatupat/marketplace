@@ -56,8 +56,13 @@
 </template>
 
 <script>
+import { ValidationProvider } from 'vee-validate'
+
 export default {
-    name: "Footer"
+    name: "Footer",
+    components: {
+        ValidationProvider
+    }
 }
 </script>
 

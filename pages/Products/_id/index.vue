@@ -40,7 +40,6 @@
               <li>{{ spec }}</li>
             </ul>
           </div>
-          
         </div>
         <!-- Check Out Card -->
         <div class="col-xs-12 col-sm-12 col-md-3">
@@ -51,14 +50,14 @@
                 <div class="input-group-prepend">
                   <button class="btn btn-outline-secondary" type="button" @click="onClickDecreaseQuatity">-</button>
                 </div>
-                <input type="text" class="form-control text-center" placeholder="1" v-model="quatity">
+                <input type="number" class="form-control text-center" placeholder="1" v-model="quatity" min=1>
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary" type="button" @click="onClickIncreaseQuatity">+</button>
                 </div>
               </div>
               <p class="text-total">
                 {{quatity}} Each 
-                <span>= ฿{{Number(parseFloat(parseInt(quatity) * parseInt(product.price)).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0})}}</span>
+                <span>= ฿{{totalPrice}}</span>
               </p>
               <button type="button" class="btn btn-secondary btn-add-cart">
                 <ion-icon class="align-middle" name="cart-outline"></ion-icon>
@@ -66,7 +65,7 @@
               </button>
             </div>
           </div>
-
+          <!-- Policy -->
           <div class="card card-policy" style="width: 18rem; margin-top: 1rem;">
             <div class="card-body">
               <p class="card-title font-weight-bold">
@@ -91,7 +90,7 @@
         <ProductCard v-for="product in otherProducts" :key="product.id" :product="product" />
       </div>
     </div>
-
+  
 
   </div>
 </template>
@@ -106,17 +105,27 @@ export default {
     HeaderCard,
     ProductCard
   },
+  data() {
+    return {
+      quatity: 1
+    }
+  },
   computed: {
     product() {
       var product = this.$store.state.product.products.find(product => product.id === this.$route.params.id);
       return product;
     },
-    productPrice() {
-      return Number(parseFloat(this.product.price).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0});
-    },
     otherProducts() {
       var products = this.$store.state.product.products.filter(product => product.id != this.$route.params.id);
       return products;
+    },
+    productPrice() {
+      var price = Number(parseFloat(this.product.price).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0});
+      return price;
+    },
+    totalPrice() {
+      var totalPrice = Number(parseFloat(parseInt(this.quatity) * parseInt(this.product.price)).toFixed(2)).toLocaleString('en', {minimumFractionDigits: 0});
+      return totalPrice;
     }
   },
   methods: {
@@ -129,12 +138,7 @@ export default {
     onClickDecreaseQuatity() {
       if(this.quatity > 1) this.quatity -= 1;
     }
-  },
-  data() {
-    return {
-      quatity: 1
-    }
-  },
+  }
 };
 </script>
 
@@ -188,6 +192,11 @@ hr {
 .price-box p {
   color: #fa6337;
   font-weight: bold;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .text-price {
   color: #fa6337;
