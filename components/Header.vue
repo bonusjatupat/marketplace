@@ -134,6 +134,10 @@ export default {
   color: black;
   border-left: 1px solid #f2f2f2;
   padding: .8rem;
+  margin-right: -4px;
   vertical-align: middle;
+}
+.category-menu span:hover {
+  background-color: #EBF4FA;
 }
 </style>
