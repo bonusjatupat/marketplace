@@ -50,10 +50,10 @@
         </div>
       </div>
 
-      <!-- Recommended Products -->
+      <!-- Recommended Products 
       <div class="sub-container">
         <HeaderCard
-          icon="choices_orange.png"
+          icon="choices_blue.png"
           header="Recommended Products"
           subHeader="NocNoc has selected some products that might suit your profile"
         />
@@ -61,11 +61,12 @@
           <CardProduct v-for="product in recommendedProducts" :key="product.id" :product="product" />
         </div>
       </div>
+      -->
       
       <!-- NocNoc's Products! -->
       <div class="sub-container">
         <HeaderCard
-          icon="choices_blue.png"
+          icon="choices_orange.png"
           header="NocNoc's Products!"
           subHeader="NocNoc's Highly Rated And Well-Priced Product That Is Ready For You."
         />
