@@ -1,6 +1,6 @@
 <template>
   <div id="CardCategory">
-      <div class="col mb-4 mt-4 card-category">
+      <div class="col mb-4 mt-4 card-category" type="button">
           <img :src="require(`@/assets/categories/${category.image}`)" alt="img" class="img-category">
           <p>{{category.name}}</p>
       </div>
@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card-category {
     text-align: center;
 }
