@@ -87,7 +87,7 @@
     <div class="layout-other-products">
       <h2>Other <span class="text-nocnoc">NocNoc</span> Products</h2>
       <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
-        <ProductCard v-for="product in otherProducts" :key="product.id" :product="product" />
+        <CardProduct v-for="product in otherProducts" :key="product.id" :product="product" />
       </div>
     </div>
   
@@ -97,13 +97,13 @@
 
 <script>
 import HeaderCard from "../../../components/HeaderCard"
-import ProductCard from "../../../components/ProductCard"
+import CardProduct from "../../../components/CardProduct"
 
 export default {
   name: "Product",
   components: {
     HeaderCard,
-    ProductCard
+    CardProduct
   },
   data() {
     return {

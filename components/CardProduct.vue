@@ -1,5 +1,5 @@
 <template>
-  <div id="ProductCard">
+  <div id="CardProduct">
       <div class="col mb-4">
           <div class="card h-100">
             <nuxt-link :to="'/products/'+product.id">
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: "ProductCard",
+    name: "CardProduct",
     props: ["product"],
     computed: {
       productPrice() {
