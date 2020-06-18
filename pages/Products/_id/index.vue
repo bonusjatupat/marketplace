@@ -6,7 +6,7 @@
       <div class="row">
         <!-- Product's Image -->
         <div class="col-xs-12 col-sm-12 col-md-4">
-          <img :src="require(`../../../assets/products/${product.id}.jpg`)" alt="img" class="img-product" />
+          <img :src="require(`@/assets/products/${product.id}.jpg`)" alt="img" class="img-product" />
           <div class="text-center">
             <button type="button" class="btn btn-light" @click="onClickFavorite(product.id)">
               <span v-if="product.favorite">
@@ -21,7 +21,7 @@
         </div>
         <!-- Product's Info -->
         <div class="col-xs-12 col-sm-12 col-md-5 content">
-          <img src="../../../assets/images/choices_orange.png" class="img-choices"/>
+          <img :src="require(`@/assets/images/choices_orange.png`)" class="img-choices"/>
           <h3>{{ product.description }}</h3>
           <p>
             <span v-for="i in product.star" :key="i">

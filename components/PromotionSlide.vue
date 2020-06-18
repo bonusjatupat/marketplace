@@ -7,13 +7,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="../assets/images/promotion1.png" class="d-block w-100">
+            <img :src="require(`@/assets/images/promotion1.png`)" class="d-block w-100">
         </div>
         <div class="carousel-item">
-            <img src="../assets/images/promotion2.png" class="d-block w-100">
+            <img :src="require(`@/assets/images/promotion2.png`)" class="d-block w-100">
         </div>
         <div class="carousel-item">
-        <img src="../assets/images/promotion3.png" class="d-block w-100">
+        <img :src="require(`@/assets/images/promotion3.png`)" class="d-block w-100">
         </div>
     </div>
     <a class="carousel-control-prev" href="#PromotionSlide" role="button" data-slide="prev">

@@ -3,7 +3,7 @@
       <div class="col mb-4">
           <div class="card h-100">
             <nuxt-link :to="'/products/'+product.id">
-                <img :src="require(`../assets/products/${product.id}.jpg`)" class="card-img-top" alt="img">
+                <img :src="require(`@/assets/products/${product.id}.jpg`)" class="card-img-top" alt="img">
             </nuxt-link>
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>

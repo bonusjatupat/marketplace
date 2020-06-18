@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
         <nuxt-link to='/' class="navbar-brand">
-            <img src="../assets/images/logo.png" class="img-brand" />
+            <img :src="require(`@/assets/images/logo.png`)" class="img-brand" />
         </nuxt-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
