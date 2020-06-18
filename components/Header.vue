@@ -1,13 +1,18 @@
 <template>
   <div id="Header">
+
+    <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
+        <!-- website's logo -->
         <nuxt-link to='/' class="navbar-brand">
             <img :src="require(`@/assets/images/logo.png`)" class="img-brand" />
         </nuxt-link>
+        <!-- hamburger menu -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- navbar's items -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto mt-auto">
             <li class="nav-item">
@@ -39,8 +44,8 @@
               <div class="btn-group">
                 <p type="button" class="dropdown-toggle mt-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</p>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#"><span><img :src="require(`@/assets/images/en_flag.svg`)"/></span>EN</a>
-                  <a class="dropdown-item" href="#"><span><img :src="require(`@/assets/images/th_flag.svg`)"/></span>ไทย</a>
+                  <a class="dropdown-item" href="#"><span><img :src="require(`@/assets/images/en_flag.svg`)"/></span> EN</a>
+                  <a class="dropdown-item" href="#"><span><img :src="require(`@/assets/images/th_flag.svg`)"/></span> ไทย</a>
                 </div>
               </div>
             </li>
@@ -54,6 +59,20 @@
         </div>
       </div>
     </nav>
+
+    <!-- category menu -->
+    <div class="category-menu">
+      <span style="border-left:0px" type="button">Furniture & Houseware <ion-icon name="chevron-down" class="align-middle" /></span>
+      <span type="button">Building & Renovation <ion-icon name="chevron-down" class="align-middle" /></span>
+      <span type="button">Outdoor <ion-icon name="chevron-down" class="align-middle" /></span>
+      <span type="button">Floor</span>
+      <span type="button">Bedroom</span>
+      <span type="button">Living Room</span>
+      <span type="button">Bathroom</span>
+      <span type="button">Kitchen</span>
+      <span type="button">Dining Room</span>
+      <span type="button">Online Flooring</span>
+    </div>
   </div>
 </template>
 
@@ -89,7 +108,7 @@ export default {
   color: #f1f1f1;
   font-size: 30px;
   margin-top: 4px;
-  margin-left: 24px;
+  margin-left: 26px;
 }
 .nav-item p {
   font-size: 14px;
@@ -104,5 +123,17 @@ export default {
 }
 .dropdown-item:hover {
   background-color: transparent;
+}
+.category-menu {
+  background-color: white;
+  text-align: center;
+}
+.category-menu span {
+  font-size: 12px;
+  font-weight: lighter;
+  color: black;
+  border-left: 1px solid #f2f2f2;
+  padding: .8rem;
+  vertical-align: middle;
 }
 </style>
