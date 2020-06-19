@@ -1,7 +1,7 @@
 const product = [
     {
         id: "00001",
-        name: "Koon Tong Sofa L-Shape",
+        name: "Koon Tong Sofa L-Shapeeeeeeeeeee",
         description: "Koon Tong Sofa L-Shape สี Wheat - หนังแท้ทั้งตัว ฐานเป็นหนังเทียม - 210ซม",
         specification: [
             "โซฟาขายดีอันดับ 1 ที่ญี่ปุ่น",
@@ -15,7 +15,8 @@ const product = [
         soldNumber: 112,
         stockNumber: 0,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 30 //30%
     },
     {
         id: "00002",
@@ -31,7 +32,8 @@ const product = [
         soldNumber: 18,
         stockNumber: 53,
         star: 3,
-        favorite: false
+        favorite: false,
+        onSale: 0
     },
     {
         id: "00003",
@@ -49,7 +51,8 @@ const product = [
         soldNumber: 49,
         stockNumber: 4,
         star: 5,
-        favorite: false
+        favorite: false,
+        onSale: 30
     },
     {
         id: "00004",
@@ -66,7 +69,8 @@ const product = [
         soldNumber: 32,
         stockNumber: 9,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 30
     },
     {
         id: "00005",
@@ -83,7 +87,8 @@ const product = [
         soldNumber: 78,
         stockNumber: 12,
         star: 5,
-        favorite: false 
+        favorite: false,
+        onSale: 0 
     },
     {
         id: "00006",
@@ -100,7 +105,8 @@ const product = [
         soldNumber: 55,
         stockNumber: 45,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 0
     },
     {
         id: "00007",
@@ -115,7 +121,8 @@ const product = [
         soldNumber: 80,
         stockNumber: 28,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 30
     },
     {
         id: "00008",
@@ -132,7 +139,8 @@ const product = [
         soldNumber: 87,
         stockNumber: 3,
         star: 2,
-        favorite: false 
+        favorite: false,
+        onSale: 0 
     },
     {
         id: "00009",
@@ -148,7 +156,8 @@ const product = [
         soldNumber: 37,
         stockNumber: 21,
         star: 5,
-        favorite: false 
+        favorite: false,
+        onSale: 30 
     }
 ]
 
@@ -167,7 +176,8 @@ const recommendedProducts = [
         soldNumber: 18,
         stockNumber: 53,
         star: 3,
-        favorite: false 
+        favorite: false,
+        onSale: 0  
     },
     {
         id: "00005",
@@ -184,7 +194,8 @@ const recommendedProducts = [
         soldNumber: 78,
         stockNumber: 12,
         star: 5,
-        favorite: false 
+        favorite: false,
+        onSale: 0 
     },
     {
         id: "00008",
@@ -201,7 +212,8 @@ const recommendedProducts = [
         soldNumber: 87,
         stockNumber: 3,
         star: 2,
-        favorite: false 
+        favorite: false, 
+        onSale: 0
     }
 ]
 

@@ -108,7 +108,7 @@
           header="NocNoc's Products!"
           subHeader="NocNoc's Highly Rated And Well-Priced Product That Is Ready For You."
         />
-        <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 container-card">
+        <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 container-card card-group">
           <CardProduct v-for="product in products" :key="product.id" :product="product" />
         </div>
       </div>
@@ -153,8 +153,6 @@ export default {
 .container-card {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-left: .1rem;
-  margin-right: .1rem;
 }
 .text-fav {
   color: #FA6337;
@@ -199,5 +197,8 @@ export default {
 .campaign-button {
   text-align: center;
   margin-top: .5rem;
+}
+.container-expert {
+  text-align: center;
 }
 </style>
