@@ -17,8 +17,46 @@
         </div>  
       </div>
 
+      <!-- Campaign Carousel -->
+      <div class="mt-4 container-campaign">
+        <div class="row">
+          <img src="@/assets/images/holidayshopping_logo.png" alt="campaign logo" type="button" class="img-campaign col-md-3">
+          <div class="container-campaign-carousel col-md-9">
+            <div id="CampaignSlide" class="carousel slide" data-ride="carousel" data-interval="false">
+
+              <div class="carousel-button">
+                <a class="text-right" href="#CampaignSlide" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="text-right" href="#CampaignSlide" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
+                    <CardProduct v-for="product in products.slice(0,4)" :key="product.id" :product="product" />
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
+                    <CardProduct v-for="product in products.slice(5,10)" :key="product.id" :product="product" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="campaign-button">
+              <button type="button" class="btn btn-secondary">See All Products</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Birthday Sale X Online Flooring -->
-      <div class="container-fluid mt-4 sub-container container-birthday">
+      <div class="container-fluid sub-container container-birthday">
         <div class="row">
           <h2 class="col-md-10">Birthday Sale X Online Flooring</h2>
           <p class="col-md-2 align-middle text-all-product" type="button">
@@ -136,5 +174,30 @@ export default {
   font-weight: bold;
   font-size: 14px;
   
+}
+.container-campaign {
+  background-image: url("../assets/images/bg_campaign.jpg");
+  padding: 3rem;
+  padding-top: 2rem;
+}
+.img-campaign {
+  max-width: 300px;
+  max-height: 290px;
+}
+.container-campaign-carousel {
+  margin-top: 2rem;
+}
+.carousel-button {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+.container-campaign button {
+  width: 350px;
+  font-weight: lighter;
+  padding: .8rem;
+}
+.campaign-button {
+  text-align: center;
+  margin-top: .5rem;
 }
 </style>

@@ -25,6 +25,9 @@
                 <span v-for="i in product.star" :key="i">
                     <ion-icon name="star" class="ic-star"></ion-icon>
                 </span>
+                <span v-for="i in (5-product.star)" :key="i" class="span-star">
+                    <ion-icon name="star-outline" class="ic-star"></ion-icon>
+                </span>
               <span class="text-sold">{{ product.soldNumber }} sold</span>
             </div>
           </div>
@@ -82,7 +85,7 @@ export default {
 .ic-star {
   color: rgb(235, 203, 25);
   font-size: 13px;
-  margin-left: 4px;
+  margin-right: 2px;
 }
 .text-sold {
   position: absolute;
