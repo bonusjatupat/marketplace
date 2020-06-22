@@ -1,7 +1,9 @@
 <template>
   <div id="CardCategory">
       <div class="col mb-4 mt-4 card-category" type="button">
-          <img :src="require(`@/assets/categories/${category.image}`)" alt="img" class="img-category">
+          <nuxt-link :to="'/categories/'">
+            <img :src="require(`@/assets/categories/${category.image}`)" alt="img" class="img-category">
+          </nuxt-link>
           <p>{{category.name}}</p>
       </div>
   </div>

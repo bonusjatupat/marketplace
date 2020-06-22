@@ -14,13 +14,13 @@
                 /{{ product.unit }}</p>
               <!-- product's sale price -->
               <div v-if="product.onSale != 0">
-                <p class="mt-1 mb-0">
+                <p class="mt-1 mb-2">
                   <span class="text-price-ori">฿{{ productPrice }}</span>
                   <span class="text-discount">-{{ product.onSale }}%</span>
                 </p>
               </div>
               <div v-else>
-                <p style="height:.67em"></p>
+                <p style="height:1.7em"></p>
               </div>
             </div>
             <div class="card-footer">  
@@ -75,8 +75,9 @@ export default {
   width: 240px;
 }
 .card-title {
-  margin-top: -1rem;
-  margin-left: -.7rem;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
   font-size: 15px;
   font-weight: bold;
   height: 2.4em;
@@ -88,9 +89,14 @@ export default {
 }
 .card-body {
   padding-bottom: 1rem;
+  padding: 0;
+}
+.card-body p {
+  padding: 0;
+  margin-bottom: .3rem;
 }
 .card-text {
-  margin-left: -.7rem;
+  margin-left: .5rem;
   margin-bottom: -.2rem;
   margin-top: -.2rem;
   font-size: 13px;
@@ -98,12 +104,12 @@ export default {
   line-height: 1.2rem;
 }
 .text-price {
-  color: #FA6337;
+  color: #F02749;
   font-weight: bold;
   font-size: 16px;
 }
 .text-price-ori {
-  margin-left: -.7rem;
+  margin-left: .5rem;
   text-decoration: line-through;
   color: #808080;
   font-weight: lighter;

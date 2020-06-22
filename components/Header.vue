@@ -127,6 +127,7 @@ export default {
 .category-menu {
   background-color: white;
   text-align: center;
+  border-bottom: 1px solid #f2f2f2;
 }
 .category-menu span {
   font-size: 12px;

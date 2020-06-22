@@ -190,7 +190,7 @@ hr {
   padding-top: 1rem;
 }
 .price-box p {
-  color: #fa6337;
+  color: #F02749;
   font-weight: bold;
 }
 input::-webkit-outer-spin-button,
@@ -199,7 +199,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 .text-price {
-  color: #fa6337;
+  color: #F02749;
   font-weight: bold;
   font-size: 32px;
   margin-left: 1rem;
