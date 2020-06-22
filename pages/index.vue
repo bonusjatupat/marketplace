@@ -88,6 +88,22 @@
         </div>
       </div>
 
+      <!-- Expert Teams -->
+      <div class="container-fluid container-expert">
+        <h2 class="mb-3">Our Expert Team Is On Standby For You</h2>
+        <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3">
+          <CardExpert v-for="i in 3" :key="i"/>
+        </div>
+      </div>
+
+      <!-- Stay Home, Stay Happy -->
+      <div class="container-fluid container-more-category">
+        <h2>Stay Home, Stay Happy</h2>
+        <div class="row row-cols-sm-3 row-cols-md-4 row-cols-lg-5 container-card">
+          <CardCategory v-for="category in categories.slice(0,5)" :key="category.id" :category="category" />
+        </div>  
+      </div>
+
       <!-- Recommended Products 
       <div class="sub-container">
         <HeaderCard
@@ -102,7 +118,7 @@
       -->
       
       <!-- NocNoc's Products! -->
-      <div class="sub-container">
+      <div class="sub-container container-product">
         <HeaderCard
           icon="choices_orange.png"
           header="NocNoc's Products!"
@@ -122,6 +138,7 @@ import PromotionSlide from "../components/PromotionSlide"
 import HeaderCard from "../components/HeaderCard"
 import CardProduct from "../components/CardProduct"
 import CardCategory from "../components/CardCategory"
+import CardExpert from "../components/CardExpert"
 
 export default {
   name: "Index",
@@ -129,7 +146,8 @@ export default {
     PromotionSlide,
     CardProduct,
     HeaderCard,
-    CardCategory
+    CardCategory,
+    CardExpert
   },
   computed: {
     products() {
@@ -199,6 +217,20 @@ export default {
   margin-top: .5rem;
 }
 .container-expert {
+  padding-top: 3rem;
+  padding-right: 6rem;
+  padding-left: 6rem;
   text-align: center;
+}
+.container-more-category {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  text-align: center;
+}
+.container-product {
+  background-color: #FAFAFA;
+  padding-top: 3rem;
 }
 </style>
