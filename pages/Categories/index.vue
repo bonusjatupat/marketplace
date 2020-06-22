@@ -101,7 +101,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container-main {
     padding-top: 3rem;
     padding-left: 3rem;
