@@ -52,7 +52,7 @@
             <li class="nav-item">
               <ion-icon name="person-circle-outline" type="button" data-toggle="modal" data-target="#exampleModalCenter"></ion-icon>
               <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <DialogSignIn />
+                <DialogSignUp />
               </div>
             </li>
           </ul>
@@ -78,11 +78,13 @@
 
 <script>
 import DialogSignIn from './DialogSignIn'
+import DialogSignUp from './DialogSignUp'
 
 export default {
   name: "Header",
   components: {
-    DialogSignIn
+    DialogSignIn,
+    DialogSignUp
   },
   data() {
     return {

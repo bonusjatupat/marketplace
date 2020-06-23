@@ -18,18 +18,19 @@
                         <span><button class="btn btn-google">Google</button></span>
                     </p>
                 </div>
+                <p class="text-have-account text-center" style="font-weight:bold;">Or</p>
                 <!-- Email & Password -->
                 <form class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email <span style="color:red">*</span></label>
                         <ValidationProvider rules="email" v-slot="{ errors }">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" v-model="email" required>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@domain.com" v-model="email" required>
                             <p class="text-error-input">{{ errors[0] }}</p>
                         </ValidationProvider>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password <span style="color:red">*</span></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Log In</button>
                     <p class="text-forget-password text-right" type="button">Forgot Password?</p>
@@ -62,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .modal-header {
     background-color: #f2f2f2;
 }
@@ -71,7 +72,7 @@ export default {
     font-size: 16px;
 }
 .form-group {
-    margin-top: -1rem;
+    margin-top: -1.5rem;
 }
 .form-group label {
     color: black;
@@ -110,6 +111,12 @@ export default {
 }
 .text-error-input {
     color: red;
+    font-weight: lighter;
+    font-size: 12px;
+}
+.text-have-account {
+    color: black;
+    margin-top: 8px;
     font-weight: lighter;
     font-size: 12px;
 }
