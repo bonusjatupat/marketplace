@@ -3,33 +3,130 @@
     <PromotionSlide />
     <div class="main-container">
 
-      <!-- Your Favorite -->
-      <div v-if="favProducts.length >= 1" class="container-fluid product-fav">
-        <h2>Your NocNoc <span class="text-fav">Favorite(s)</span></h2>
+      <!-- Work Hard, Shop Harder -->
+      <div class="container-fluid mt-4 sub-container">
+        <div class="row">
+          <h2 class="col-md-10">Work Hard, Shop Harder</h2>
+          <p class="col-md-2 align-middle text-all-product" type="button">
+            See All Products
+            <ion-icon name="chevron-forward-outline" class="align-middle" />
+          </p>
+        </div>
+        <div class="row row-cols-sm-3 row-cols-md-4 row-cols-lg-6 container-card">
+          <CardCategory v-for="category in categories" :key="category.id" :category="category" />
+        </div>  
       </div>
-      <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
-        <ProductCard v-for="product in favProducts" :key="product.id" :product="product" />
-      </div>
-      <div v-if="favProducts.length >= 1"><p></p></div>
 
-      <!-- Recommended Products -->
-      <HeaderCard
-        icon="choices_orange.png"
-        header="Recommended Products"
-        subHeader="NocNoc has selected some products that might suit your profile"
-      />
-      <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
-        <ProductCard v-for="product in recommendedProducts" :key="product.id" :product="product" />
+      <!-- Campaign Carousel -->
+      <div class="mt-4 container-campaign">
+        <div class="row">
+          <img src="@/assets/images/holidayshopping_logo.png" alt="campaign logo" type="button" class="img-campaign col-md-3">
+          <div class="container-campaign-carousel col-md-9">
+            <div id="CampaignSlide" class="carousel slide" data-ride="carousel" data-interval="false">
+
+              <div class="carousel-button">
+                <a class="text-right" href="#CampaignSlide" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="text-right" href="#CampaignSlide" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
+                    <CardProduct v-for="product in products.slice(0,4)" :key="product.id" :product="product" />
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
+                    <CardProduct v-for="product in products.slice(5,10)" :key="product.id" :product="product" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="campaign-button">
+              <button type="button" class="btn btn-secondary">See All Products</button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Birthday Sale X Online Flooring -->
+      <div class="container-fluid sub-container container-birthday">
+        <div class="row">
+          <h2 class="col-md-10">Birthday Sale X Online Flooring</h2>
+          <p class="col-md-2 align-middle text-all-product" type="button">
+            See All Products
+            <ion-icon name="chevron-forward-outline" class="align-middle" />
+          </p>
+        </div>
+        <div id="ProductSlide" class="carousel slide container-card" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+                <CardProduct v-for="product in products.slice(0,5)" :key="product.id" :product="product" />
+              </div>
+            </div>
+
+            <div class="carousel-item">
+               <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+                <CardProduct v-for="product in products.slice(6,11)" :key="product.id" :product="product" />
+              </div>
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#ProductSlide" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next" href="#ProductSlide" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Expert Teams -->
+      <div class="container-fluid container-expert">
+        <h2 class="mb-3">Our Expert Team Is On Standby For You</h2>
+        <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3">
+          <CardExpert v-for="i in 3" :key="i"/>
+        </div>
+      </div>
+
+      <!-- Stay Home, Stay Happy -->
+      <div class="container-fluid container-more-category">
+        <h2>Stay Home, Stay Happy</h2>
+        <div class="row row-cols-sm-3 row-cols-md-4 row-cols-lg-5 container-card">
+          <CardCategory v-for="category in categories.slice(0,5)" :key="category.id" :category="category" />
+        </div>  
+      </div>
+
+      <!-- Recommended Products 
+      <div class="sub-container">
+        <HeaderCard
+          icon="choices_blue.png"
+          header="Recommended Products"
+          subHeader="NocNoc has selected some products that might suit your profile"
+        />
+        <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 container-card">
+          <CardProduct v-for="product in recommendedProducts" :key="product.id" :product="product" />
+        </div>
+      </div>
+      -->
       
       <!-- NocNoc's Products! -->
-      <HeaderCard
-        icon="choices_blue.png"
-        header="NocNoc's Products!"
-        subHeader="NocNoc's Highly Rated And Well-Priced Product That Is Ready For You."
-      />
-      <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 product-card">
-        <ProductCard v-for="product in products" :key="product.id" :product="product" />
+      <div class="sub-container container-product">
+        <HeaderCard
+          icon="choices_orange.png"
+          header="NocNoc's Products!"
+          subHeader="NocNoc's Highly Rated And Well-Priced Product That Is Ready For You."
+        />
+        <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 container-card card-group">
+          <CardProduct v-for="product in products" :key="product.id" :product="product" />
+        </div>
       </div>
 
     </div>
@@ -39,14 +136,18 @@
 <script>
 import PromotionSlide from "../components/PromotionSlide"
 import HeaderCard from "../components/HeaderCard"
-import ProductCard from "../components/ProductCard"
+import CardProduct from "../components/CardProduct"
+import CardCategory from "../components/CardCategory"
+import CardExpert from "../components/CardExpert"
 
 export default {
   name: "Index",
   components: {
     PromotionSlide,
-    ProductCard,
-    HeaderCard
+    CardProduct,
+    HeaderCard,
+    CardCategory,
+    CardExpert
   },
   computed: {
     products() {
@@ -58,23 +159,78 @@ export default {
     },
     recommendedProducts() {
       return this.$store.state.product.recommendedProducts
+    },
+    categories() {
+      return this.$store.state.product.categories
     }
   }
 }
 </script>
 
 <style scoped>
-.main-container {
-  padding-left: 4rem;
-  padding-right: 4rem;
+.container-card {
   margin-top: 1rem;
-}
-.product-card {
-  margin-top: 1rem;
-  margin-left: .1rem;
-  margin-right: .1rem;
+  margin-bottom: 1rem;
 }
 .text-fav {
   color: #FA6337;
+}
+.sub-container {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 1rem;
+}
+.container-birthday {
+  background-color: #EBEBF7;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+}
+.text-all-product {
+  color: #343ab4;
+  font-weight: bold;
+  font-size: 14px;
+  
+}
+.container-campaign {
+  background-image: url("../assets/images/bg_campaign.jpg");
+  padding: 3rem;
+  padding-top: 2rem;
+}
+.img-campaign {
+  max-width: 300px;
+  max-height: 290px;
+}
+.container-campaign-carousel {
+  margin-top: 2rem;
+}
+.carousel-button {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+.container-campaign button {
+  width: 350px;
+  font-weight: lighter;
+  padding: .8rem;
+}
+.campaign-button {
+  text-align: center;
+  margin-top: .5rem;
+}
+.container-expert {
+  padding-top: 3rem;
+  padding-right: 6rem;
+  padding-left: 6rem;
+  text-align: center;
+}
+.container-more-category {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  text-align: center;
+}
+.container-product {
+  background-color: #FAFAFA;
+  padding-top: 3rem;
 }
 </style>

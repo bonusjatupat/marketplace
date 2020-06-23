@@ -1,8 +1,8 @@
 <template>
-  <div id="HeaderCard" class="container-fluid title">
+  <div id="HeaderCard" class="title">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-2">
-        <img :src="require(`@/assets/images/${icon}`)" class="card-img-top" alt="img">
+        <img :src="require(`@/assets/images/${icon}`)" class="img-choices" alt="img">
       </div>
       <div class="col-xs-12 col-sm-12 col-md-10">
         <h2>{{header}}</h2>

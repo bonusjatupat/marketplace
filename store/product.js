@@ -1,7 +1,7 @@
 const product = [
     {
         id: "00001",
-        name: "Koon Tong Sofa L-Shape",
+        name: "Koon Tong Sofa L-Shapeeeeeeeeeee",
         description: "Koon Tong Sofa L-Shape สี Wheat - หนังแท้ทั้งตัว ฐานเป็นหนังเทียม - 210ซม",
         specification: [
             "โซฟาขายดีอันดับ 1 ที่ญี่ปุ่น",
@@ -9,13 +9,14 @@ const product = [
             "มี 2 ขนาด",
             "กว้าง 210 x ลึก 150cm x สูง 76cm"
         ],
-        image: "../assets/products/00001.jpg",
+        image: "@/assets/products/00001.jpg",
         price: 30000,
         unit: "Each",
         soldNumber: 112,
         stockNumber: 0,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 30 //30%
     },
     {
         id: "00002",
@@ -25,13 +26,14 @@ const product = [
             "ปรับเป็นเตียงนอนได้",
             "โครงไม้โอ๊คแท้"
         ], 
-        image: "../assets/products/00002.jpg",
+        image: "@/assets/products/00002.jpg",
         price: 16000,
         unit: "Each",
         soldNumber: 18,
         stockNumber: 53,
         star: 3,
-        favorite: false
+        favorite: false,
+        onSale: 0
     },
     {
         id: "00003",
@@ -43,13 +45,14 @@ const product = [
             "ขาแบบสแตนเลส หมุนได้ 360 องศา",
             "รับน้ำหนักได้สูงสุด 120kgs"
         ], 
-        image: "../assets/products/00003.jpg",
+        image: "@/assets/products/00003.jpg",
         price: 23300,
         unit: "Each",
         soldNumber: 49,
         stockNumber: 4,
         star: 5,
-        favorite: false
+        favorite: false,
+        onSale: 30
     },
     {
         id: "00004",
@@ -60,13 +63,14 @@ const product = [
             "เคลือบโพลียูรีเทนใสกึ่งด้าน กันน้ำ กันรา",
             "รับน้ำหนักได้สูงสุด 120kgs"
         ], 
-        image: "../assets/products/00004.png",
+        image: "@/assets/products/00004.png",
         price: 32000,
         unit: "Each",
         soldNumber: 32,
         stockNumber: 9,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 30
     },
     {
         id: "00005",
@@ -77,13 +81,14 @@ const product = [
             "เคลือบโพลียูรีเทนใสกึ่งด้าน กันน้ำ กันรา",
             "เบาะผลิตจากฟองน้ำเกรดดีที่สุด"
         ], 
-        image: "../assets/products/00005.jpg",
+        image: "@/assets/products/00005.jpg",
         price: 19800,
         unit: "Each",
         soldNumber: 78,
         stockNumber: 12,
         star: 5,
-        favorite: false 
+        favorite: false,
+        onSale: 0 
     },
     {
         id: "00006",
@@ -94,13 +99,14 @@ const product = [
             "1 Design 2 Countries | วางจำหน่ายทั้งในประเทศไทยและประเทศญี่ปุ่น",
             "สามารถใช้เป็นโซฟาเดี่ยว 1 ที่นั่ง หรือใช้เป็นเก้าอี้ทานข้าวในชุดอาหาร"
         ], 
-        image: "../assets/products/00006.jpg",
+        image: "@/assets/products/00006.jpg",
         price: 36900,
         unit: "Each",
         soldNumber: 55,
         stockNumber: 45,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 0
     },
     {
         id: "00007",
@@ -109,13 +115,14 @@ const product = [
         specification: [
             "ที่นั่ง Pocket Spring เสริมความนุ่มเด้ง"
         ], 
-        image: "../assets/products/00007.png",
+        image: "@/assets/products/00007.png",
         price: 12200,
         unit: "Each",
         soldNumber: 80,
         stockNumber: 28,
         star: 4,
-        favorite: false
+        favorite: false,
+        onSale: 30
     },
     {
         id: "00008",
@@ -126,13 +133,14 @@ const product = [
             "พร้อมเบาะรองนั่งและหมอนอิงใหญ่ 3 ใบ ถอดซักได้ทุกชิ้น",
             "สีผ้าเบาะและหมอนอิงสามารถเลือกได้ 10 สี"
         ], 
-        image: "../assets/products/00008.jpg",
+        image: "@/assets/products/00008.jpg",
         price: 5600,
         unit: "Each",
         soldNumber: 87,
         stockNumber: 3,
         star: 2,
-        favorite: false 
+        favorite: false,
+        onSale: 0 
     },
     {
         id: "00009",
@@ -142,13 +150,14 @@ const product = [
             "โครงไม้จริง",
             "ฟองน้ำเกรดเอ"
         ], 
-        image: "../assets/products/00009.jpg",
+        image: "@/assets/products/00009.jpg",
         price: 8200,
         unit: "Each",
         soldNumber: 37,
         stockNumber: 21,
         star: 5,
-        favorite: false 
+        favorite: false,
+        onSale: 30 
     }
 ]
 
@@ -161,13 +170,14 @@ const recommendedProducts = [
             "ปรับเป็นเตียงนอนได้",
             "โครงไม้โอ๊คแท้"
         ], 
-        image: "../assets/products/00002.jpg",
+        image: "@/assets/products/00002.jpg",
         price: 16000,
         unit: "Each",
         soldNumber: 18,
         stockNumber: 53,
         star: 3,
-        favorite: false 
+        favorite: false,
+        onSale: 0  
     },
     {
         id: "00005",
@@ -178,13 +188,14 @@ const recommendedProducts = [
             "เคลือบโพลียูรีเทนใสกึ่งด้าน กันน้ำ กันรา",
             "เบาะผลิตจากฟองน้ำเกรดดีที่สุด"
         ], 
-        image: "../assets/products/00005.jpg",
+        image: "@/assets/products/00005.jpg",
         price: 19800,
         unit: "Each",
         soldNumber: 78,
         stockNumber: 12,
         star: 5,
-        favorite: false 
+        favorite: false,
+        onSale: 0 
     },
     {
         id: "00008",
@@ -195,19 +206,84 @@ const recommendedProducts = [
             "พร้อมเบาะรองนั่งและหมอนอิงใหญ่ 3 ใบ ถอดซักได้ทุกชิ้น",
             "สีผ้าเบาะและหมอนอิงสามารถเลือกได้ 10 สี"
         ], 
-        image: "../assets/products/00008.jpg",
+        image: "@/assets/products/00008.jpg",
         price: 5600,
         unit: "Each",
         soldNumber: 87,
         stockNumber: 3,
         star: 2,
-        favorite: false 
+        favorite: false, 
+        onSale: 0
+    }
+]
+
+const categories = [
+    {
+        id: 1,
+        name: "Office Chairs",
+        image: "chair.png"
+    },
+    {
+        id: 2,
+        name: "Ergonomic Chairs",
+        image: "ergonomic_chair.png"
+    },
+    {
+        id: 3,
+        name: "Desk",
+        image: "desk.png"
+    },
+    {
+        id: 4,
+        name: "Bookshelves & Cabinets",
+        image: "bookshelves.png"
+    },
+    {
+        id: 5,
+        name: "Air Conditioner",
+        image: "air_conditioner.png"
+    },
+    {
+        id: 6,
+        name: "Fan",
+        image: "fan.png"
+    },
+    {
+        id: 7,
+        name: "Air Purifiers",
+        image: "air_purifier.png"
+    },
+    {
+        id: 8,
+        name: "Indoor Decor",
+        image: "indoor_decor.png"
+    },
+    {
+        id: 9,
+        name: "Lamps & Lighting",
+        image: "lamp.png"
+    },
+    {
+        id: 10,
+        name: "Rugs",
+        image: "rug.png"
+    },
+    {
+        id: 11,
+        name: "Curtains",
+        image: "curtain.png"
+    },
+    {
+        id: 12,
+        name: "Kitchen Appliances",
+        image: "kitchen.png"
     }
 ]
 
 export const state = () => ({
     products: product,
-    recommendedProducts: recommendedProducts
+    recommendedProducts: recommendedProducts,
+    categories: categories
 })
 
 export const mutations = {
